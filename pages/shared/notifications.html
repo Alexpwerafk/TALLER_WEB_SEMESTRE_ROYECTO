@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Notificaciones y Ajustes | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Notification settings header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill"></div>
+        <span class="sr-only">TutoresOn-Line</span>
+      </a>
+      <span class="meta">Panel de Usuario</span>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal" style="max-width: 600px; margin: 0 auto;">
+    <div class="section-heading">
+      <h1 style="font-size: 1.8rem; letter-spacing: -0.02em;">Ajustes de Notificaciones</h1>
+    </div>
+
+    <!-- Preference panel prepared for future profile settings endpoint -->
+    <div class="card stack" style="gap: var(--space-md);">
+      
+      <p class="meta" style="line-height: 1.5;">Configura cómo quieres recibir las alertas de nuevas solicitudes de tutoría, confirmaciones y mensajes del sistema.</p>
+      
+      <div class="pref-list">
+        
+        <!-- Email -->
+        <div class="pref-item">
+          <div class="stack" style="gap: 4px;">
+            <div class="row" style="font-size: 1.1rem;">
+              <span>📧</span>
+              <strong>Correo Electrónico</strong>
+            </div>
+            <span class="meta" style="font-size: 0.85rem;">Alertas detalladas al email de registro.</span>
+          </div>
+          <div class="toggle active" onclick="this.classList.toggle('active')" style="cursor: pointer;"></div>
+        </div>
+        
+        <!-- SMS -->
+        <div class="pref-item">
+          <div class="stack" style="gap: 4px;">
+            <div class="row" style="font-size: 1.1rem;">
+              <span>💬</span>
+              <strong>SMS / Mensajes de Texto</strong>
+            </div>
+            <span class="meta" style="font-size: 0.85rem;">Notificaciones cortas (Costos adicionales aplican).</span>
+          </div>
+          <div class="toggle" onclick="this.classList.toggle('active')" style="cursor: pointer;"></div>
+        </div>
+        
+        <!-- WhatsApp -->
+        <div class="pref-item">
+          <div class="stack" style="gap: 4px;">
+            <div class="row" style="font-size: 1.1rem;">
+              <span>🟢</span>
+              <strong>Integración WhatsApp</strong>
+            </div>
+            <span class="meta" style="font-size: 0.85rem;">Avisos instantáneos y enlaces directos al bot.</span>
+            <label for="whatsapp-number" class="sr-only">Número de WhatsApp</label>
+            <input type="text" id="whatsapp-number" name="whatsappNumber" class="input" placeholder="Ej: +57 300 000 0000" style="margin-top: 0.5rem; max-width: 200px; font-size: 0.85rem;" />
+          </div>
+          <div class="toggle active" onclick="this.classList.toggle('active')" style="cursor: pointer;"></div>
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary" style="margin-top: var(--space-md); max-width: 240px;">Guardar Preferencias</button>
+
+    </div>
+  </main>
+</body>
+</html>

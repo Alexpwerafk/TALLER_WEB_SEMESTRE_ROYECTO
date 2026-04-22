@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Iniciar Sesión | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Auth wrapper: centers login UI and keeps visual consistency across auth pages -->
+  <div class="auth-wrapper">
+    <!-- Minimal top bar with brand and registration shortcut -->
+    <header class="site-header" style="position: absolute; top:0; left:0; width:100%; z-index:10; background:transparent; border:none; backdrop-filter:none;">
+      <div class="header-inner">
+        <a href="../../index.html" class="brand">
+          <div class="brand-pill"></div>
+          <span>TutoresOn-Line</span>
+        </a>
+        <a href="register.html" class="btn btn-ghost">Crear cuenta</a>
+      </div>
+    </header>
+
+    <!-- Main login card -->
+    <main class="auth-card glass reveal" aria-labelledby="login-title">
+      <div class="stack" style="text-align: center; gap: var(--space-xs); margin-bottom: var(--space-lg);">
+        <h1 id="login-title" style="font-size: 1.8rem; letter-spacing: -0.02em;">Bienvenido de nuevo</h1>
+        <p class="meta">Ingresa tus credenciales para continuar</p>
+      </div>
+
+      <!--
+        Demo action currently redirects to student dashboard.
+        Backend-ready fields include name/id attributes for direct API binding.
+      -->
+      <form action="../student/search-tutors.html" method="post" class="form-grid" autocomplete="on">
+        <div class="input-group">
+          <label for="login-email">Correo electrónico</label>
+          <input type="email" id="login-email" name="email" class="input" placeholder="tu@correo.com" autocomplete="email" required />
+        </div>
+        
+        <div class="input-group">
+          <div class="row between">
+            <label for="login-password">Contraseña</label>
+            <a href="#" class="meta" style="color: var(--brand); font-size: 0.8rem;">¿Olvidaste tu contraseña?</a>
+          </div>
+          <input type="password" id="login-password" name="password" class="input" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: var(--space-sm); width: 100%;">
+          Iniciar sesión
+        </button>
+
+        <!-- Demo shortcuts to speed up the Corte 1 presentation flow -->
+        <div class="stack" style="margin-top: var(--space-xl); border-top: 1px solid var(--line); padding-top: var(--space-md);">
+          <p class="meta" style="text-align: center; font-size: 0.8rem;">Accesos de demostración (Corte 1):</p>
+          <div class="row wrap" style="justify-content: center;">
+            <a href="../student/search-tutors.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">Demo Estudiante</a>
+            <a href="../tutor/dashboard.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">Demo Tutor</a>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

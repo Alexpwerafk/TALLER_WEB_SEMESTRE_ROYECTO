@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Registro | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+  <style>
+    /* Highlights selected role card in registration flow */
+    .role-input:checked + .role-box {
+      border-color: rgba(0, 113, 227, 0.8);
+      background: rgba(0, 113, 227, 0.05);
+      box-shadow: 0 0 0 1px rgba(0, 113, 227, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <!-- Auth wrapper for centered register layout -->
+  <div class="auth-wrapper">
+    <!-- Top utility navigation -->
+    <header class="site-header" style="position: absolute; top:0; left:0; width:100%; z-index:10; background:transparent; border:none; backdrop-filter:none;">
+      <div class="header-inner">
+        <a href="../../index.html" class="brand">
+          <div class="brand-pill"></div>
+          <span>TutoresOn-Line</span>
+        </a>
+        <a href="login.html" class="btn btn-ghost">Ya tengo cuenta</a>
+      </div>
+    </header>
+
+    <!-- Main registration card -->
+    <main class="auth-card glass reveal" style="width: min(100%, 640px);" aria-labelledby="register-title">
+      <!-- Card heading -->
+      <div class="stack" style="text-align: center; gap: var(--space-xs); margin-bottom: var(--space-lg);">
+        <h1 id="register-title" style="font-size: 1.8rem; letter-spacing: -0.02em;">Crea tu cuenta</h1>
+        <p class="meta">Únete a la mejor plataforma de enseñanza</p>
+      </div>
+
+      <!--
+        Demo action currently returns to login.
+        Backend-ready naming is included for direct API payload mapping.
+      -->
+      <form action="login.html" method="post" class="form-grid" autocomplete="on">
+        
+        <!-- Account role selection (student or tutor) -->
+        <div class="input-group" style="margin-bottom: var(--space-sm);">
+          <label>Quiero usar la plataforma como:</label>
+          <div class="auth-roles">
+            <label class="stack" style="cursor: pointer;">
+              <input type="radio" id="role-student" name="role" value="student" class="sr-only role-input" checked />
+              <div class="role-box stack" style="align-items: center; text-align: center;">
+                <span style="font-size: 1.5rem;">📚</span>
+                <strong>Estudiante</strong>
+                <span class="meta" style="font-size: 0.75rem;">Para buscar ayuda</span>
+              </div>
+            </label>
+            <label class="stack" style="cursor: pointer;">
+              <input type="radio" id="role-tutor" name="role" value="tutor" class="sr-only role-input" />
+              <div class="role-box stack" style="align-items: center; text-align: center;">
+                <span style="font-size: 1.5rem;">🧑‍🏫</span>
+                <strong>Tutor</strong>
+                <span class="meta" style="font-size: 0.75rem;">Para dar clases</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Personal information fields -->
+        <div class="form-grid cols-2">
+          <div class="input-group">
+            <label for="register-first-name">Nombre</label>
+            <input type="text" id="register-first-name" name="firstName" class="input" placeholder="Juan" autocomplete="given-name" required />
+          </div>
+          <div class="input-group">
+            <label for="register-last-name">Apellido</label>
+            <input type="text" id="register-last-name" name="lastName" class="input" placeholder="Pérez" autocomplete="family-name" required />
+          </div>
+        </div>
+
+        <!-- Login credentials -->
+        <div class="input-group">
+          <label for="register-email">Correo electrónico</label>
+          <input type="email" id="register-email" name="email" class="input" placeholder="tu@correo.com" autocomplete="email" required />
+        </div>
+        
+        <div class="input-group">
+          <label for="register-password">Contraseña</label>
+          <input type="password" id="register-password" name="password" class="input" placeholder="••••••••" autocomplete="new-password" required />
+        </div>
+
+        <!-- Legal acceptance gate -->
+        <div class="input-group mt-2">
+          <label for="terms-accepted" style="display: flex; gap: 0.5rem; align-items: start;">
+            <input type="checkbox" id="terms-accepted" name="termsAccepted" required style="margin-top: 0.2rem;" />
+            <span class="meta" style="line-height: 1.3;">Acepto los <a href="#" style="color: var(--brand);">Términos de servicio</a> y la <a href="#" style="color: var(--brand);">Política de privacidad</a>.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: var(--space-sm); width: 100%;">
+          Registrarme
+        </button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

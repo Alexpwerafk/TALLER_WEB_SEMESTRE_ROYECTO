@@ -1,0 +1,173 @@
+/* Shared layout blocks */
+/* Sticky top header used throughout app */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--line);
+  background: rgba(245, 245, 247, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+/* Header content alignment and max width */
+.header-inner {
+  width: min(100%, var(--max-content));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+/* Brand lockup (icon + product name) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 640;
+  letter-spacing: -0.01em;
+}
+
+/* Brand icon pill */
+.brand-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(130deg, #0071e3, #4aa9ff);
+  box-shadow: 0 12px 20px rgba(0, 113, 227, 0.35);
+}
+
+/* Top navigation hidden on mobile */
+.top-nav {
+  display: none;
+}
+
+/* Hero block wrappers */
+.page-hero {
+  margin-bottom: var(--space-lg);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.hero-note {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  width: fit-content;
+  font-size: 0.85rem;
+  color: #0f5caf;
+  background: rgba(0, 113, 227, 0.12);
+}
+
+.hero-title {
+  font-size: clamp(1.7rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 62ch;
+}
+
+/* Generic section spacing */
+.section {
+  margin-top: var(--space-lg);
+}
+
+.section-heading {
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.section-heading h2 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+/* Generic grid utilities */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  grid-template-columns: 1fr;
+}
+
+/* Footer wrappers */
+.site-footer {
+  padding: var(--space-xl) var(--space-md) var(--space-xl);
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  width: min(100%, var(--max-content));
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-md);
+  font-size: 0.9rem;
+}
+
+.page-stack {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Tablet navigation and grid updates */
+@media (min-width: 768px) {
+  .site-header {
+    padding-inline: var(--space-lg);
+  }
+
+  .top-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .top-nav a {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+  }
+
+  .top-nav a:hover {
+    background: rgba(17, 18, 24, 0.05);
+    color: var(--text);
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop grid expansion */
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

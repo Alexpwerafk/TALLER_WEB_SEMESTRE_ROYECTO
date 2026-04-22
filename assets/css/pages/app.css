@@ -1,0 +1,330 @@
+/* Hero visual container used in landing split layout */
+.hero-visual {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  min-height: 240px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(228, 241, 255, 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  align-content: space-between;
+}
+
+/* Real logo icon in landing navbar brand */
+.landing-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 12px 20px rgba(0, 113, 227, 0.25);
+}
+
+/* Real icon used inside landing feature cards */
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(17, 18, 24, 0.12);
+}
+
+/* Supporting informational cards under hero area */
+.pillars {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.pillar {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: var(--space-sm);
+}
+
+/* Quick navigation link tiles (optional utility blocks) */
+.quick-links {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.quick-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.85rem 1rem;
+}
+
+/* Auth screens: center layout and card sizing */
+.auth-wrapper {
+  min-height: calc(100vh - 160px);
+  display: grid;
+  place-items: center;
+}
+
+.auth-card {
+  width: min(100%, 520px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+/* Role selector card group for register page */
+.auth-roles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+.role-box {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  padding: var(--space-sm);
+  background: #ffffff;
+}
+
+/* Search toolbar and filter grid for student finder */
+.toolbar {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.filter-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+/* Tutor card styles in listing view */
+.tutor-card {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.tutor-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+/* Shared avatar style across student/tutor dashboards */
+.avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0071e3, #4aa9ff);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+
+/* Tag chips to represent subjects, modality, or skills */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  font-size: 0.78rem;
+  color: #0f5caf;
+  background: #e8f2ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Two-column profile layout for tutor detail + booking card */
+.profile-layout {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Keep booking summary visible while scrolling on larger screens */
+.sticky-card {
+  position: sticky;
+  top: 92px;
+}
+
+/* Reservation step indicator */
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.step {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.step.current {
+  border-color: rgba(0, 113, 227, 0.35);
+  background: #eaf3ff;
+  color: #0f5caf;
+}
+
+/* Generic status group wrappers for session/request cards */
+.status-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.session-row {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+/* Request list wrappers used in tutor inbox */
+.request-list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.request-item {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: var(--space-sm);
+  display: grid;
+  gap: var(--space-sm);
+}
+
+/* Reputation score and rating sections */
+.reputation-summary {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.score {
+  font-size: clamp(2rem, 9vw, 3.2rem);
+  letter-spacing: -0.04em;
+  font-weight: 640;
+}
+
+/* Notification preference list and custom toggles */
+.pref-list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.pref-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.toggle {
+  min-width: 52px;
+  height: 30px;
+  border-radius: 999px;
+  background: #d8dbe3;
+  position: relative;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toggle.active {
+  background: #3d9bff;
+}
+
+.toggle.active::after {
+  left: 25px;
+}
+
+/* AI assistant chat shell and message styles */
+.chat-shell {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.chat-log {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.bubble {
+  max-width: 88%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 14px;
+  font-size: 0.92rem;
+}
+
+.bubble.user {
+  justify-self: end;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.bubble.bot {
+  background: #edf4ff;
+  color: #0f2447;
+}
+
+/* Mobile evidence tiles for Corte 1 presentation support */
+.mobile-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+.device-tile {
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: var(--space-sm);
+  min-height: 140px;
+  display: grid;
+  align-content: space-between;
+}
+
+/* Tablet and desktop layout enhancements */
+@media (min-width: 768px) {
+  .toolbar {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .filter-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .profile-layout {
+    grid-template-columns: 1.3fr 0.7fr;
+  }
+
+  .session-row {
+    grid-template-columns: 1.1fr 1fr auto;
+    align-items: center;
+  }
+
+  .request-item {
+    grid-template-columns: 1.1fr 1fr auto;
+    align-items: center;
+  }
+
+  .mobile-showcase {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

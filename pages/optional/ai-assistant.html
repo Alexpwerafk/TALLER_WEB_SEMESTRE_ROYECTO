@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Asistente de IA | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- AI assistant header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill" style="background: linear-gradient(130deg, #9851ff, #c396ff);"></div>
+        <span class="sr-only">TutoresOn-Line (IA)</span>
+      </a>
+      <a href="../student/search-tutors.html" class="meta">← Volver a Búsqueda</a>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal" style="max-width: 700px; margin: 0 auto;">
+    
+    <!-- Conversational recommendation module (UI-only for Corte 1) -->
+    <div class="card bg" style="background: radial-gradient(circle at top right, rgba(152,81,255,0.08), transparent 40%), var(--surface-strong); border: 2px solid rgba(152,81,255,0.2);">
+      
+      <div class="stack" style="text-align: center; gap: 8px; margin-bottom: var(--space-lg); border-bottom: 1px solid var(--line); padding-bottom: var(--space-md);">
+        <h1 style="font-size: 1.6rem; letter-spacing: -0.02em;">✨ Recomendador Inteligente</h1>
+        <p class="meta">Cuéntame en qué estás atascado(a) y te encontraré al tutor ideal.</p>
+      </div>
+
+      <div class="chat-shell">
+        
+        <!-- Pantalla UI Simulando Chat -->
+        <div class="chat-log" style="min-height: 400px; max-height: 50vh; overflow-y: auto; background: #fafafc; padding: 1rem;">
+          
+          <div class="bubble bot">
+            ¡Hola! Soy tu asistente de TutoresOn-Line. Cuéntame, ¿qué tema universitario o escolar no entiendes hoy?
+          </div>
+          
+          <div class="bubble user delay-1">
+            Mañana tengo parcial de Integrales Triples y no domino absolutamente nada de cálculo vectorial. Ayuda.
+          </div>
+          
+          <div class="bubble bot delay-2">
+            Entendido. <strong>Integrales Triples y Calculo Vectorial</strong>. Buscando entre nuestros tutores mejor calificados...
+            <br><br>
+            ¡Encontré a la indicada!
+            <br>
+            <div class="card soft" style="margin-top: 0.8rem; padding: 0.6rem;">
+              <strong>Ana Martínez (⭐ 4.9)</strong><br>
+              <span class="meta" style="font-size: 0.85rem;">Magíster en Matemáticas. Disponible para modalidad Virtual HOY a las 20:00.</span>
+              <a href="../student/tutor-profile.html" class="btn btn-secondary" style="margin-top: 0.5rem; width: 100%; font-size: 0.85rem;">Reservar Tutoría ($15)</a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="input-group" style="position: relative;">
+          <label for="ai-query" class="sr-only">Consulta al asistente IA</label>
+          <input type="text" id="ai-query" name="query" class="input" placeholder="Escribe tu problema aquí..." style="padding-right: 50px; background: #ffffff;" />
+          <button class="btn btn-primary" style="position: absolute; right: 4px; top: 4px; min-height: 36px; padding: 0 1rem; border-radius: 8px;" onclick="alert('Funcionalidad Opcional (Front-end)')">Ir</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

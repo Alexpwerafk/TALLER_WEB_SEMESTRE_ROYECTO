@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Reputación del Tutor | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Reputation header and return navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill"></div>
+        <span class="sr-only">TutoresOn-Line</span>
+      </a>
+      <a href="../student/tutor-profile.html" class="meta">← Volver al Perfil</a>
+      <div class="row">
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px;">EP</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal" style="max-width: 800px; margin: 0 auto;">
+    
+    <div class="section-heading">
+      <h1 style="font-size: 2rem;">Reputación de <span style="color:var(--brand);">Ana Martínez</span></h1>
+    </div>
+
+    <!-- KPI and student review submission form -->
+    <div class="grid grid-2" style="gap: var(--space-lg); align-items: start; margin-bottom: var(--space-xl);">
+      <div class="card soft stack" style="gap: var(--space-md); text-align: center; justify-content: center; min-height: 240px; background: linear-gradient(to bottom right, rgba(0, 113, 227, 0.05), transparent);">
+        <div class="score" style="font-size: 4rem;">4.9</div>
+        <strong style="font-size: 1.2rem;">120 Reseñas Reales</strong>
+        <p class="meta">Basado en estudiantes verificados.</p>
+      </div>
+
+      <!-- Backend-ready review payload: rating + comment -->
+      <form action="../student/search-tutors.html" method="post" class="card stack" style="gap: var(--space-sm);">
+        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Dejar tu reseña (Como Estudiante)</h3>
+        <div class="input-group">
+          <label>¿Cuántas estrellas le das?</label>
+          <div class="row" style="gap: 4px; font-size: 1.5rem; cursor: pointer;">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span style="opacity:0.3;">⭐</span>
+          </div>
+          <input type="hidden" name="rating" value="4" />
+        </div>
+        <div class="input-group">
+          <label for="review-comment">Comentario</label>
+          <textarea id="review-comment" name="comment" class="textarea" rows="4" placeholder="Narra tu experiencia con este tutor..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;" onclick="alert('Evaluación simulada guardada.')">Publicar Reseña</button>
+      </form>
+    </div>
+
+    <!-- Listado Histórico -->
+    <div class="stack" style="gap: var(--space-md);">
+      <h3>Todas las reseñas</h3>
+      <div class="list">
+        
+        <div class="list-item" style="border-radius: var(--radius-md); padding: var(--space-md);">
+          <div class="row between" style="margin-bottom: var(--space-sm);">
+            <div class="row" style="gap: var(--space-sm);">
+              <div class="avatar" style="width:40px; height:40px; border-radius:50%; font-size:0.9rem;">DC</div>
+              <div class="stack" style="gap:0;">
+                <strong>David C.</strong>
+                <span class="meta" style="font-size: 0.8rem;">Hace 2 días</span>
+              </div>
+            </div>
+            <div class="badge badge-success">⭐ 5.0</div>
+          </div>
+          <p style="font-size: 1rem; line-height: 1.5;">Excelente profesora. Logró explicarme en 2 horas lo que no entendí en todo el semestre. Si tienes bases débiles, Ana te devuelve el nivel en la primera sesión.</p>
+        </div>
+
+        <div class="list-item" style="border-radius: var(--radius-md); padding: var(--space-md);">
+          <div class="row between" style="margin-bottom: var(--space-sm);">
+            <div class="row" style="gap: var(--space-sm);">
+              <div class="avatar" style="width:40px; height:40px; border-radius:50%; font-size:0.9rem; background:#7b5200; color:#fff;">MF</div>
+              <div class="stack" style="gap:0;">
+                <strong>María F.</strong>
+                <span class="meta" style="font-size: 0.8rem;">Hace 1 semana</span>
+              </div>
+            </div>
+            <div class="badge badge-success">⭐ 4.8</div>
+          </div>
+          <p style="font-size: 1rem; line-height: 1.5;">Muy puntual y paciente. Todo estuvo excelente. El único detalle fue que empezamos 5 minutos tarde por su conexión a internet, pero de resto, genial.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>
