@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Buscar Tutores | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Main student header navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill"></div>
+        <span class="sr-only">TutoresOn-Line</span>
+      </a>
+      <nav class="top-nav">
+        <a href="search-tutors.html" style="color: var(--text); font-weight: 500;">Buscar</a>
+        <a href="my-sessions.html">Mis Sesiones</a>
+        <a href="../optional/ai-assistant.html">Asistente IA ✨</a>
+      </nav>
+      <div class="row">
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px;">EP</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!--
+      Search filter form.
+      Uses querystring-compatible names so backend can read filters with minimal changes.
+    -->
+    <form class="toolbar glass" action="search-tutors.html" method="get" style="border-radius: var(--radius-md); padding: var(--space-sm); margin-bottom: var(--space-lg); position: sticky; top: 70px; z-index: 10;">
+      <div class="input-group">
+        <label for="search-query" class="sr-only">Buscar materia o tema</label>
+        <input type="text" id="search-query" name="query" class="input" placeholder="¿Qué quieres aprender hoy? (ej. Cálculo, React, Inglés)..." style="border: none; background: transparent; font-size: 1.1rem;" />
+      </div>
+      <!-- Faceted filtering controls -->
+      <div class="row wrap" style="gap: var(--space-xs); justify-content: flex-end;">
+        <label for="search-modality" class="sr-only">Filtrar por modalidad</label>
+        <select id="search-modality" name="modality" class="select" style="min-height: 36px; padding: 0.3rem 0.6rem; border-radius: 8px;">
+          <option>Modalidad</option>
+          <option>Virtual</option>
+          <option>Presencial</option>
+        </select>
+        <label for="search-level" class="sr-only">Filtrar por nivel</label>
+        <select id="search-level" name="level" class="select" style="min-height: 36px; padding: 0.3rem 0.6rem; border-radius: 8px;">
+          <option>Nivel</option>
+          <option>Básico</option>
+          <option>Universitario</option>
+        </select>
+        <label for="search-location" class="sr-only">Filtrar por ubicación</label>
+        <select id="search-location" name="location" class="select" style="min-height: 36px; padding: 0.3rem 0.6rem; border-radius: 8px;">
+          <option>Zona / Ciudad</option>
+        </select>
+        <label for="search-availability" class="sr-only">Filtrar por disponibilidad</label>
+        <select id="search-availability" name="availability" class="select" style="min-height: 36px; padding: 0.3rem 0.6rem; border-radius: 8px;">
+          <option>Disponibilidad</option>
+          <option>Hoy</option>
+          <option>Esta semana</option>
+          <option>Fin de semana</option>
+        </select>
+        <button type="submit" class="btn btn-primary" style="min-height: 36px; padding: 0.3rem 0.8rem;">Filtrar</button>
+      </div>
+    </form>
+
+    <!-- Search result listing -->
+    <div class="section-heading">
+      <h2>Tutores Disponibles</h2>
+      <a href="../optional/realtime-booking.html" class="btn btn-secondary" style="min-height: 32px; padding: 0.4rem 0.8rem; font-size: 0.85rem;">🗺️ Ver mapa en vivo</a>
+    </div>
+
+    <div class="grid grid-3">
+      <!-- Tutor Card 1 -->
+      <div class="card tutor-card reveal delay-1">
+        <div class="tutor-header">
+          <div class="avatar">AM</div>
+          <div class="stack" style="text-align: right; gap: 0;">
+            <div class="score" style="font-size: 1.2rem;">⭐ 4.9</div>
+            <span class="meta" style="font-size: 0.8rem;">120 reseñas</span>
+          </div>
+        </div>
+        <div class="stack" style="gap: 4px;">
+          <h3 style="font-size: 1.2rem;">Ana Martínez</h3>
+          <span class="meta">Magíster en Matemáticas Aplicadas</span>
+        </div>
+        <div class="chips">
+          <span class="chip">Cálculo Diferencial</span>
+          <span class="chip">Álgebra</span>
+          <span class="chip">Virtual</span>
+        </div>
+        <div class="row between" style="margin-top: var(--space-sm); border-top: 1px solid var(--line); padding-top: var(--space-sm);">
+          <div class="kpi">
+            <span class="value" style="font-size: 1.1rem;">$15</span>
+            <span class="label" style="font-size: 0.75rem;">/hora</span>
+          </div>
+          <a href="tutor-profile.html" class="btn btn-primary" style="padding: 0.4rem 1.2rem;">Ver Perfil</a>
+        </div>
+      </div>
+
+      <!-- Tutor Card 2 -->
+      <div class="card tutor-card reveal delay-2">
+        <div class="tutor-header">
+          <div class="avatar" style="background: linear-gradient(145deg, #168a4a, #2ec56f);">CG</div>
+          <div class="stack" style="text-align: right; gap: 0;">
+            <div class="score" style="font-size: 1.2rem;">⭐ 4.7</div>
+            <span class="meta" style="font-size: 0.8rem;">85 reseñas</span>
+          </div>
+        </div>
+        <div class="stack" style="gap: 4px;">
+          <h3 style="font-size: 1.2rem;">Carlos Gómez</h3>
+          <span class="meta">Desarrollador Senior Frontend</span>
+        </div>
+        <div class="chips">
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">React</span>
+          <span class="chip">Presencial</span>
+        </div>
+        <div class="row between" style="margin-top: var(--space-sm); border-top: 1px solid var(--line); padding-top: var(--space-sm);">
+          <div class="kpi">
+            <span class="value" style="font-size: 1.1rem;">$20</span>
+            <span class="label" style="font-size: 0.75rem;">/hora</span>
+          </div>
+          <a href="tutor-profile.html" class="btn btn-primary" style="padding: 0.4rem 1.2rem;">Ver Perfil</a>
+        </div>
+      </div>
+
+      <!-- Tutor Card 3 -->
+      <div class="card tutor-card reveal delay-3">
+        <div class="tutor-header">
+          <div class="avatar" style="background: linear-gradient(145deg, #9c6b00, #ffb81c);">LR</div>
+          <div class="stack" style="text-align: right; gap: 0;">
+            <div class="score" style="font-size: 1.2rem;">⭐ 5.0</div>
+            <span class="meta" style="font-size: 0.8rem;">210 reseñas</span>
+          </div>
+        </div>
+        <div class="stack" style="gap: 4px;">
+          <h3 style="font-size: 1.2rem;">Laura Ruiz</h3>
+          <span class="meta">Licenciada en Idiomas Modernos</span>
+        </div>
+        <div class="chips">
+          <span class="chip">Inglés</span>
+          <span class="chip">Francés</span>
+          <span class="chip">Híbrido</span>
+        </div>
+        <div class="row between" style="margin-top: var(--space-sm); border-top: 1px solid var(--line); padding-top: var(--space-sm);">
+          <div class="kpi">
+            <span class="value" style="font-size: 1.1rem;">$18</span>
+            <span class="label" style="font-size: 0.75rem;">/hora</span>
+          </div>
+          <a href="tutor-profile.html" class="btn btn-primary" style="padding: 0.4rem 1.2rem;">Ver Perfil</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

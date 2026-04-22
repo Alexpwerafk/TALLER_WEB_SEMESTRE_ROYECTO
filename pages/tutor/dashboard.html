@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Dashboard Tutor | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Tutor dashboard header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill" style="background: linear-gradient(130deg, #168a4a, #2ec56f);"></div>
+        <span class="sr-only">TutoresOn-Line (Panel Tutor)</span>
+      </a>
+      <nav class="top-nav">
+        <a href="dashboard.html" style="color: var(--text); font-weight: 500;">Panel Control</a>
+        <a href="availability.html">Disponibilidad</a>
+        <a href="requests.html">Bandeja (2)</a>
+      </nav>
+      <div class="row">
+        <a href="../shared/notifications.html" class="btn btn-ghost" style="padding: 0.4rem; border-radius: 50%;">🔔</a>
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px; background: #0071e3;">AM</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal">
+    <div class="section-heading">
+      <h2>¡Hola de nuevo, Ana!</h2>
+      <a href="availability.html" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">Gestionar Horario</a>
+    </div>
+
+    <!-- KPI summary cards -->
+    <div class="metric-row" style="margin-bottom: var(--space-lg);">
+      <div class="card soft">
+        <div class="kpi">
+          <span class="value">4.9</span>
+          <span class="label">Reputación ⭐</span>
+        </div>
+      </div>
+      <div class="card soft">
+        <div class="kpi">
+          <span class="value" style="color: var(--brand);">2</span>
+          <span class="label">Solicitudes hoy</span>
+        </div>
+      </div>
+      <div class="card soft">
+        <div class="kpi">
+          <span class="value" style="color: var(--success);">14</span>
+          <span class="label">Clases del mes</span>
+        </div>
+      </div>
+      <div class="card soft">
+        <div class="kpi">
+          <span class="value">$210</span>
+          <span class="label">Ingresos mes</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main dashboard panels -->
+    <div class="grid grid-2" style="gap: var(--space-lg); align-items: start;">
+      
+      <!-- Próximas Sesiones del Tutor -->
+      <div class="stack">
+        <div class="row between" style="margin-bottom: var(--space-xs);">
+          <h3 style="font-size: 1.3rem;">Próximas Sesiones</h3>
+          <a href="#" class="meta" style="color: var(--brand); font-size: 0.85rem;">Ver todas</a>
+        </div>
+        
+        <div class="list">
+          <div class="card session-row" style="border-left: 4px solid var(--success);">
+            <div class="stack" style="gap: 4px;">
+              <span class="badge badge-success" style="width: min-content;">Hoy</span>
+              <strong>14:00 - 15:00</strong>
+              <p class="meta">Cálculo Diferencial</p>
+            </div>
+            <div class="stack" style="gap: 4px;">
+              <span>Estudiante: David C.</span>
+              <span class="meta">Modalidad: Virtual</span>
+            </div>
+            <div class="row wrap" style="justify-content: flex-end;">
+              <a href="#" class="btn btn-primary" onclick="alert('Microsoft Teams / Meet link simulado'); return false;" style="padding: 0.3rem 0.8rem; font-size: 0.85rem;">Iniciar Sala</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini Bandeja de Entrada -->
+      <div class="stack">
+        <div class="row between" style="margin-bottom: var(--space-xs);">
+          <h3 style="font-size: 1.3rem;">Solicitudes Recientes</h3>
+          <span class="badge badge-warning">2 Nuevas</span>
+        </div>
+
+        <div class="list">
+          <div class="request-item">
+            <div class="stack" style="gap:4px;">
+              <strong>Juan Pérez</strong>
+              <span class="meta">Álgebra Lineal</span>
+            </div>
+            <div class="stack" style="gap:4px;">
+              <span class="meta">Mañana 09:00</span>
+              <span class="badge badge-info" style="width: min-content;">Presencial</span>
+            </div>
+            <div class="row" style="justify-content: flex-end;">
+              <a href="requests.html" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Revisar →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+</body>
+</html>

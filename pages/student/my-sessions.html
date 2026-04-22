@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Mis Sesiones | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Student session center header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill"></div>
+        <span class="sr-only">TutoresOn-Line</span>
+      </a>
+      <nav class="top-nav">
+        <a href="search-tutors.html">Buscar</a>
+        <a href="my-sessions.html" style="color: var(--text); font-weight: 500;">Mis Sesiones</a>
+        <a href="../optional/ai-assistant.html">Asistente IA ✨</a>
+      </nav>
+      <div class="row">
+        <a href="../shared/notifications.html" class="btn btn-ghost" style="padding: 0.4rem; border-radius: 50%;">🔔</a>
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px;">EP</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal">
+    <div class="section-heading">
+      <h1 style="font-size: 2rem;">Mis Sesiones de Tutoría</h1>
+    </div>
+
+    <!-- Pestañas simuladas -->
+    <div class="row" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--line); padding-bottom: 0px; gap: var(--space-md);">
+      <div style="border-bottom: 2px solid var(--brand); padding-bottom: 0.5rem; font-weight: 500;">Próximas (2)</div>
+      <div class="meta" style="padding-bottom: 0.5rem; cursor: pointer;">Historial (12)</div>
+    </div>
+
+    <!-- Session cards grouped by state -->
+    <div class="stack" style="gap: var(--space-md);">
+      
+      <!-- Sesión Confirmada (Virtual) -->
+      <div class="card session-row" style="border-left: 4px solid var(--success);">
+        <div class="stack" style="gap: var(--space-2xs);">
+          <div class="row" style="gap: var(--space-xs);">
+            <div class="badge badge-success">Confirmada</div>
+            <span class="meta" style="font-size: 0.8rem;">Mañana, 14:00 - 15:00</span>
+          </div>
+          <h3 style="font-size: 1.1rem; margin-top: 0.3rem;">Cálculo Diferencial</h3>
+          <p class="meta">Con Ana Martínez</p>
+        </div>
+        
+        <div class="stack" style="gap: 0;">
+          <span style="font-size: 0.9rem;">📍 <strong>Modalidad:</strong> Virtual</span>
+          <span class="meta" style="font-size: 0.8rem;">Enlace Meet generado automáticamente</span>
+        </div>
+
+        <div class="row wrap" style="justify-content: flex-end;">
+          <a href="#" class="btn btn-primary" onclick="alert('Simulación: Abriendo Google Meet / Zoom/ Teams...'); return false;">💻 Entrar a Videollamada</a>
+        </div>
+      </div>
+
+      <!-- Sesión Pendiente (Presencial) -->
+      <div class="card session-row" style="border-left: 4px solid var(--warning);">
+        <div class="stack" style="gap: var(--space-2xs);">
+          <div class="row" style="gap: var(--space-xs);">
+            <div class="badge badge-warning">Esperando aprobación</div>
+            <span class="meta" style="font-size: 0.8rem;">Jueves 18, 16:00 - 17:00</span>
+          </div>
+          <h3 style="font-size: 1.1rem; margin-top: 0.3rem;">HTML/CSS y React</h3>
+          <p class="meta">Con Carlos Gómez</p>
+        </div>
+        
+        <div class="stack" style="gap: 0;">
+          <span style="font-size: 0.9rem;">📍 <strong>Modalidad:</strong> Presencial</span>
+          <span class="meta" style="font-size: 0.8rem;">Biblioteca Universidad Central, Piso 2</span>
+        </div>
+
+        <div class="row wrap" style="justify-content: flex-end;">
+          <button class="btn btn-secondary" style="color: var(--danger); border-color: rgba(180,35,24,0.3);">Cancelar</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

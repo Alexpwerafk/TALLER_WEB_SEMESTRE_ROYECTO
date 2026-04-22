@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Bandeja de Solicitudes | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Tutor request inbox header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill" style="background: linear-gradient(130deg, #168a4a, #2ec56f);"></div>
+        <span class="sr-only">TutoresOn-Line (Panel Tutor)</span>
+      </a>
+      <nav class="top-nav">
+        <a href="dashboard.html">Panel Control</a>
+        <a href="availability.html">Disponibilidad</a>
+        <a href="requests.html" style="color: var(--text); font-weight: 500;">Bandeja (2)</a>
+      </nav>
+      <div class="row">
+        <a href="../shared/notifications.html" class="btn btn-ghost" style="padding: 0.4rem; border-radius: 50%;">🔔</a>
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px; background: #0071e3;">AM</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal">
+    <div class="section-heading">
+      <h2>Solicitudes de Tutoría</h2>
+    </div>
+
+    <!-- Incoming request list -->
+    <div class="request-list">
+      <!-- Item 1 -->
+      <div class="request-item" style="border-left: 4px solid var(--brand);">
+        <div class="stack">
+          <div class="row" style="gap: var(--space-xs);">
+            <div class="avatar" style="width: 44px; height: 44px; font-size: 1rem; border-radius: 10px; background: #e8f7ef; color:#106b3a;">JP</div>
+            <div>
+              <strong>Juan Pérez</strong><br>
+              <span class="meta" style="font-size: 0.85rem;">Estudiante Universitario</span>
+            </div>
+          </div>
+          <div class="timeline" style="margin-top: 0.5rem;">
+            <div class="timeline-item meta" style="font-size: 0.85rem;">Materia: Álgebra Lineal</div>
+            <div class="timeline-item meta" style="font-size: 0.85rem;">Horario: Mañana, 09:00 - 10:00</div>
+          </div>
+        </div>
+
+        <div class="stack" style="gap: 4px;">
+          <span class="badge badge-info">📍 Presencial</span>
+          <span class="meta" style="font-size: 0.85rem; max-width: 200px;">Ubicación: Biblioteca Luis Ángel Arango</span>
+          <p class="meta" style="font-style: italic; font-size: 0.8rem; margin-top:0.4rem;">"Hola profe, necesito ayuda urg. para mi examen de mañana."</p>
+        </div>
+
+        <div class="stack" style="gap: 0.5rem; justify-self: center;">
+          <button class="btn btn-primary" onclick="alert('Solicitud Aceptada. El estudiante recibirá una notificación por Correo/WhatsApp.')">✅ Aceptar Sesión</button>
+          <button class="btn btn-ghost" style="color: var(--danger); border: 1px solid rgba(180,35,24,0.3);">❌ Rechazar</button>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="request-item" style="border-left: 4px solid var(--brand);">
+        <div class="stack">
+          <div class="row" style="gap: var(--space-xs);">
+            <div class="avatar" style="width: 44px; height: 44px; font-size: 1rem; border-radius: 10px; background: #fff3dc; color:#7b5200;">MR</div>
+            <div>
+              <strong>María Rodríguez</strong><br>
+              <span class="meta" style="font-size: 0.85rem;">Estudiante Básica</span>
+            </div>
+          </div>
+          <div class="timeline" style="margin-top: 0.5rem;">
+            <div class="timeline-item meta" style="font-size: 0.85rem;">Materia: Matemáticas I</div>
+            <div class="timeline-item meta" style="font-size: 0.85rem;">Horario: Sábado, 16:00 - 17:00</div>
+          </div>
+        </div>
+
+        <div class="stack" style="gap: 4px;">
+          <span class="badge badge-success">💻 Virtual</span>
+          <span class="meta" style="font-size: 0.85rem; max-width: 200px;">Vía: Integración de Videoconferencia (Meet)</span>
+        </div>
+
+        <div class="stack" style="gap: 0.5rem; justify-self: center;">
+          <button class="btn btn-primary" onclick="alert('Solicitud Aceptada. Enlace de Meet generado dinámicamente.')">✅ Aceptar Sesión</button>
+          <button class="btn btn-ghost" style="color: var(--danger); border: 1px solid rgba(180,35,24,0.3);">❌ Rechazar</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

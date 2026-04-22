@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Manejo de Disponibilidad | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Tutor panel header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill" style="background: linear-gradient(130deg, #168a4a, #2ec56f);"></div>
+        <span class="sr-only">TutoresOn-Line (Panel Tutor)</span>
+      </a>
+      <nav class="top-nav">
+        <a href="dashboard.html">Panel Control</a>
+        <a href="availability.html" style="color: var(--text); font-weight: 500;">Disponibilidad</a>
+        <a href="requests.html">Bandeja (2)</a>
+      </nav>
+      <div class="row">
+        <a href="../shared/notifications.html" class="btn btn-ghost" style="padding: 0.4rem; border-radius: 50%;">🔔</a>
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px; background: #0071e3;">AM</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal" style="max-width: 800px; margin: 0 auto;">
+    <!-- Availability page title and save action -->
+    <div class="section-heading">
+      <div class="stack">
+        <h2>Gestión de Horarios</h2>
+        <p class="meta">Actualiza tu calendario. Los estudiantes solo podrán verte en franjas verdes.</p>
+      </div>
+      <button class="btn btn-primary" onclick="alert('Estilos de calendario guardados en base de datos')">Guardar Cambios</button>
+    </div>
+
+    <!-- Availability configuration form -->
+    <form action="availability.html" method="post" class="card stack" style="gap: var(--space-md);">
+      
+      <!-- Selector Simplificado Semanal UI -->
+      <div class="row between wrap" style="border-bottom: 1px solid var(--line); padding-bottom: 0.5rem;">
+        <h3 style="font-size: 1.1rem;">Semana Actual (Lunes a Viernes)</h3>
+        <div class="row">
+          <div class="meta row" style="gap: 4px; font-size: 0.85rem;"><span style="color: var(--brand);">■</span> Disponible</div>
+          <div class="meta row" style="gap: 4px; font-size: 0.85rem;"><span style="color: #999;">■</span> Bloqueado</div>
+        </div>
+      </div>
+
+      <!-- Visual weekly slot grid -->
+      <div class="grid grid-2" style="gap: var(--space-md);">
+        
+        <!-- Morning slots -->
+        <div class="stack">
+          <strong>Mañanas (08:00 - 12:00)</strong>
+          <div class="calendar" style="grid-template-columns: repeat(3, minmax(0,1fr));">
+            <label class="slot available" style="cursor:pointer;"><input type="checkbox" name="availableSlots[]" value="08:00" checked class="sr-only">08:00</label>
+            <label class="slot available" style="cursor:pointer;"><input type="checkbox" name="availableSlots[]" value="09:00" checked class="sr-only">09:00</label>
+            <label class="slot" style="cursor:pointer; opacity: 0.5;"><input type="checkbox" name="availableSlots[]" value="10:00" class="sr-only">10:00</label>
+            <label class="slot" style="cursor:pointer; opacity: 0.5;"><input type="checkbox" name="availableSlots[]" value="11:00" class="sr-only">11:00</label>
+            <label class="slot available" style="cursor:pointer;"><input type="checkbox" name="availableSlots[]" value="12:00" checked class="sr-only">12:00</label>
+          </div>
+        </div>
+
+        <!-- Afternoon slots -->
+        <div class="stack">
+          <strong>Tardes (14:00 - 18:00)</strong>
+          <div class="calendar" style="grid-template-columns: repeat(3, minmax(0,1fr));">
+            <label class="slot" style="cursor:pointer; opacity: 0.5;"><input type="checkbox" name="availableSlots[]" value="14:00" class="sr-only">14:00</label>
+            <label class="slot" style="cursor:pointer; opacity: 0.5;"><input type="checkbox" name="availableSlots[]" value="15:00" class="sr-only">15:00</label>
+            <label class="slot available" style="cursor:pointer;"><input type="checkbox" name="availableSlots[]" value="16:00" checked class="sr-only">16:00</label>
+            <label class="slot available" style="cursor:pointer;"><input type="checkbox" name="availableSlots[]" value="17:00" checked class="sr-only">17:00</label>
+            <label class="slot available" style="cursor:pointer;"><input type="checkbox" name="availableSlots[]" value="18:00" checked class="sr-only">18:00</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="input-group" style="margin-top: var(--space-lg); border-top: 1px solid var(--line); padding-top: var(--space-md);">
+        <label for="availability-note">Aviso / Nota General para Estudiantes</label>
+        <textarea id="availability-note" name="availabilityNote" class="textarea" style="min-height: 80px;" placeholder="Ej: Las tutorías presenciales solo las dicto en bibliotecas públicas..."></textarea>
+      </div>
+
+    </form>
+  </main>
+
+  <script>
+    // Pequeño script visual para simular toggle de slots
+    document.querySelectorAll('.slot input[type="checkbox"]').forEach(input => {
+      input.addEventListener('change', function() {
+        if(this.checked) {
+          this.parentElement.classList.add('available');
+          this.parentElement.style.opacity = '1';
+        } else {
+          this.parentElement.classList.remove('available');
+          this.parentElement.style.opacity = '0.5';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

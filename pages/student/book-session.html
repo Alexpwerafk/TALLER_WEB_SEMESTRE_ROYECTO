@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Reserva y Pago | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/co43
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill"></div>
+        <span class="sr-only">TutoresOn-Line</span>
+      </a>
+      <span class="meta">Checkout Seguro 🔒</span>
+    </div>
+  </header>
+
+  <main class="page-shell section reveal" style="max-width: 800px; margin: 0 auto;">
+    
+    <!-- Booking progress indicator -->
+    <div class="stepper" style="margin-bottom: var(--space-lg); justify-content: center;">
+      <div class="step">1. Selección</div>
+      <div class="step current">2. Confirmación y Modalidad</div>
+      <div class="step">3. ¡Listo!</div>
+    </div>
+
+    <!-- Checkout split: editable form + immutable summary -->
+    <div class="grid grid-2" style="align-items: start; gap: var(--space-lg);">
+      <div class="stack">
+        <!-- Reservation configuration -->
+        <h1 style="font-size: 1.6rem; letter-spacing: -0.02em;">Detalles de la sesión</h1>
+        
+        <!-- Booking form prepared for future reservation API integration -->
+        <form action="my-sessions.html" method="post" class="stack" style="margin-top: var(--space-md);">
+          <div class="card soft stack" style="gap: var(--space-xs);">
+            <div class="input-group">
+              <label>Modalidad de Sesión</label>
+              <div class="grid grid-2" style="gap: var(--space-xs);">
+                <label class="slot available" style="cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                  <input type="radio" id="mode-virtual" name="modality" value="virtual" class="sr-only" checked>
+                  <span style="font-size: 1.2rem; margin-bottom:4px;">💻</span> Virtual
+                </label>
+                <label class="slot" style="cursor:pointer; display:flex; flex-direction:column; justify-content:center; align-items:center; border-color:var(--line);">
+                  <input type="radio" id="mode-presencial" name="modality" value="presencial" class="sr-only">
+                  <span style="font-size: 1.2rem; margin-bottom:4px;">📍</span> Presencial
+                </label>
+              </div>
+            </div>
+            
+            <div class="input-group" style="margin-top: var(--space-sm);">
+              <label for="booking-note">Mensaje para el tutor (Opcional)</label>
+              <textarea id="booking-note" name="studentNote" class="textarea" placeholder="Dime qué temas específicos quieres tratar..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: var(--space-md);">Confirmar y Reservar ($15)</button>
+        </form>
+      </div>
+
+      <!-- Price and booking summary card -->
+      <div class="card" style="background: rgba(0, 113, 227, 0.03); border-color: rgba(0, 113, 227, 0.1);">
+        <h3 style="font-size: 1.1rem; margin-bottom: var(--space-sm);">Resumen</h3>
+        <div class="stack" style="gap: var(--space-sm);">
+          <div class="row between">
+            <span class="meta">Tutor</span>
+            <strong>Ana Martínez</strong>
+          </div>
+          <div class="row between">
+            <span class="meta">Materia</span>
+            <strong>Cálculo Diferencial</strong>
+          </div>
+          <div class="row between">
+            <span class="meta">Fecha</span>
+            <strong>Martes, 14:00 hrs</strong>
+          </div>
+          <div style="border-top: 1px dashed var(--line); margin: var(--space-xs) 0;"></div>
+          <div class="row between" style="font-size: 1.2rem;">
+            <strong>Total a pagar</strong>
+            <strong style="color: var(--brand);">$15.00</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Perfil de Tutor | TutoresOn-Line</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Tutor profile header and navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">
+        <div class="brand-pill"></div>
+        <span class="sr-only">TutoresOn-Line</span>
+      </a>
+      <nav class="top-nav">
+        <a href="search-tutors.html">← Volver a Búsqueda</a>
+      </nav>
+      <div class="row">
+        <div class="avatar" style="width: 36px; height: 36px; font-size: 0.8rem; border-radius: 10px;">EP</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell section">
+    <div class="profile-layout">
+      
+      <!-- Tutor detail and social proof -->
+      <div class="stack" style="gap: var(--space-lg);">
+        <!-- Tutor identity and bio card -->
+        <div class="card reveal delay-1">
+          <div class="row" style="gap: var(--space-md); margin-bottom: var(--space-md);">
+            <div class="avatar" style="width: 80px; height: 80px; font-size: 1.5rem;">AM</div>
+            <div class="stack" style="gap: 4px;">
+              <h1 style="font-size: 1.8rem;">Ana Martínez</h1>
+              <span class="meta">Magíster en Matemáticas Aplicadas</span>
+              <div class="chips" style="margin-top: 0.2rem;">
+                <span class="chip">Virtual</span>
+                <span class="chip">Presencial (Bogotá Norte)</span>
+              </div>
+            </div>
+          </div>
+          <div class="stack">
+            <h3>Sobre mí</h3>
+            <p class="meta" style="line-height: 1.6;">Apasionada por los números y la enseñanza. Tengo más de 5 años de experiencia ayudando a estudiantes universitarios a pasar cálculo y álgebra lineal sin sufrir en el intento. Mi metodología se basa en entender la lógica detrás de la fórmula, no solo memorizar.</p>
+          </div>
+        </div>
+
+        <!-- Tutor rating preview and testimonial snippets -->
+        <div class="card reveal delay-2">
+          <div class="section-heading" style="margin-bottom: var(--space-sm);">
+            <h3 style="font-size: 1.3rem;">Reputación</h3>
+            <div class="score">⭐ 4.9</div>
+          </div>
+          <div class="list">
+            <div class="list-item">
+              <div class="row between" style="margin-bottom: 0.4rem;">
+                <strong>David C.</strong>
+                <span class="badge badge-success">⭐ 5.0</span>
+              </div>
+              <p class="meta">"Excelente profesora. Logró explicarme en 2 horas lo que no entendí en todo el semestre."</p>
+            </div>
+            <div class="list-item">
+              <div class="row between" style="margin-bottom: 0.4rem;">
+                <strong>María F.</strong>
+                <span class="badge badge-success">⭐ 4.8</span>
+              </div>
+              <p class="meta">"Muy puntual y paciente. Solo tuvimos un pequeño problema de conexión al inicio."</p>
+            </div>
+            <a href="../shared/reputation.html" class="btn btn-ghost" style="margin-top: var(--space-xs);">Ver todas (120)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky booking card with backend-ready form fields -->
+      <div class="stack reveal delay-3">
+        <div class="card sticky-card" style="border: 2px solid rgba(0, 113, 227, 0.15);">
+          <h3 style="font-size: 1.2rem; margin-bottom: var(--space-sm);">Agendar Sesión</h3>
+          <div class="kpi" style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid var(--line);">
+            <span class="value">$15</span>
+            <span class="label">Monto por hora</span>
+          </div>
+          
+          <!-- Quick booking form from profile context -->
+          <form action="book-session.html" method="post" class="stack">
+            <div class="input-group">
+              <label for="booking-subject">Selecciona Materia</label>
+              <select id="booking-subject" name="subject" class="select" required>
+                <option value="calculo-diferencial">Cálculo Diferencial</option>
+                <option value="algebra-lineal">Álgebra Lineal</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label>Disponibilidad esta semana</label>
+              <!-- Mock de calendario UI -->
+              <div class="calendar">
+                <div class="slot blocked" title="Ocupado">Lun<br>10:00</div>
+                <label class="slot available" style="cursor:pointer;"><input type="radio" name="slot" value="martes-14" class="sr-only" required checked>Mar<br>14:00</label>
+                <label class="slot available" style="cursor:pointer;"><input type="radio" name="slot" value="jueves-16" class="sr-only" required>Jue<br>16:00</label>
+                <div class="slot blocked" title="Ocupado">Vie<br>09:00</div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: var(--space-sm);">Continuar Reserva</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
