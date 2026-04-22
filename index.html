@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>TutoresOn-Line | Sube de nivel tu aprendizaje</title>
+  <!-- Favicon de anthropic.com -->
+  <link rel="icon" type="image/x-icon" href="https://anthropic.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.google.com/s2/favicons?domain=anthropic.com&sz=180">
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/layout.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/pages/app.css" />
+</head>
+<body>
+  <!-- Public landing header -->
+  <header class="site-header reveal">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="./assets/img/favicon.png" alt="Logo TutoresOn-Line" class="landing-brand-icon" />
+        <span>TutoresOn-Line</span>
+      </a>
+      <nav class="top-nav">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#materias">Materias</a>
+      </nav>
+      <div class="row">
+        <a href="pages/auth/login.html" class="btn btn-ghost" style="display: none;">Entrar</a>
+        <a href="pages/auth/register.html" class="btn btn-primary">Comenzar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell page-stack">
+    <!-- Hero section: value proposition and main CTAs -->
+    <section class="page-hero reveal delay-1">
+      <!-- Two-column responsive hero composition -->
+      <div class="split-hero">
+        <div class="stack" style="gap: var(--space-lg);">
+          <!-- Primary narrative + conversion copy -->
+          <div class="hero-note">🚀 Plataforma educativa moderna</div>
+          <h1 class="hero-title">El tutor perfecto,<br>a un clic de distancia.</h1>
+          <p class="hero-subtitle">Conecta con expertos en tiempo real o programa sesiones presenciales. Sube tus notas con la ayuda adecuada, exactamente cuando la necesitas.</p>
+          <div class="row wrap">
+            <a href="pages/auth/register.html" class="btn btn-primary">Encontrar un tutor</a>
+            <a href="pages/auth/register.html?role=tutor" class="btn btn-secondary">Quiero enseñar</a>
+          </div>
+        </div>
+        <!-- Visual proof block with tutor availability sample -->
+        <div class="hero-visual glass">
+          <div class="kpi">
+            <span class="label">Satisfacción promedio</span>
+            <span class="value">4.9/5.0</span>
+          </div>
+          <div class="stack">
+            <div class="tutor-header" style="background: rgba(255,255,255,0.6); padding: 1rem; border-radius: 12px;">
+              <div class="row">
+                <div class="avatar">JM</div>
+                <div class="stack" style="gap: 2px;">
+                  <strong style="font-size: 0.9rem;">Juan M.</strong>
+                  <span class="meta">Matemáticas Avanzadas</span>
+                </div>
+              </div>
+              <div class="badge badge-success">Disponible</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature section: how platform works and key differentiators -->
+    <section id="como-funciona" class="section reveal delay-2">
+      <div class="section-heading">
+        <h2>Diseñado para el éxito.</h2>
+      </div>
+      <!-- Product capability cards -->
+      <div id="materias" class="grid grid-3">
+        <div class="card soft stack">
+          <img src="./assets/img/favicon.png" alt="Icono reservas" class="feature-icon" />
+          <h3>Reservas Flexibles</h3>
+          <p class="meta">Elige el horario que mejor se adapte a ti. Virtual por videoconferencia integrada o presencial en tu zona.</p>
+        </div>
+        <div class="card soft stack">
+          <img src="./assets/img/favicon.png" alt="Icono reputación" class="feature-icon" />
+          <h3>Reputación Confiable</h3>
+          <p class="meta">Sistema de reseñas transparente. Aprende solo con los mejores tutores verificados por la comunidad.</p>
+        </div>
+        <div class="card soft stack">
+          <img src="./assets/img/favicon.png" alt="Icono IA" class="feature-icon" />
+          <h3>On-Demand & IA</h3>
+          <p class="meta">Encuentra ayuda en tiempo real tipo "Uber de tutorías" y recibe recomendaciones con nuestra IA integrada.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public footer -->
+  <footer class="site-footer">
+    <div class="footer-inner row between wrap">
+      <span>© 2026 TutoresOn-Line. Todos los derechos reservados.</span>
+      <nav class="row">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
